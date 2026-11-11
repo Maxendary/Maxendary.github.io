@@ -1,0 +1,107 @@
+:root {
+  --bg: #f4f4f5;
+  --card: #ffffff;
+  --text: #27272a;
+  --muted: #71717a;
+  --line: #e4e4e7;
+  --dark: #3f3f46;
+  --darker: #27272a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a { color: var(--dark); text-underline-offset: 3px; }
+a:hover { color: var(--darker); }
+
+header {
+  background: var(--darker);
+  color: #fafafa;
+}
+.nav {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: #fafafa;
+  text-decoration: none;
+}
+.logo span { color: #a1a1aa; font-weight: 400; }
+.nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+.nav ul a { color: #d4d4d8; text-decoration: none; font-size: 0.95rem; }
+.nav ul a:hover, .nav ul a.active { color: #fff; }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  text-align: center;
+  padding: 56px 0 40px;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.hero p { color: var(--muted); font-size: 1.15rem; max-width: 520px; margin: 0 auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+}
+.card h2, .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.card p { color: var(--muted); font-size: 0.95rem; }
+
+.legal h1 { font-size: 2rem; margin-bottom: 24px; letter-spacing: -0.01em; }
+.legal h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+.legal h3 { font-size: 1rem; margin: 20px 0 6px; }
+.legal p, .legal li { margin-bottom: 10px; }
+.legal ul { padding-left: 22px; }
+.legal .card { margin-bottom: 16px; }
+
+footer {
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+.foot {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.foot a { color: var(--muted); margin-left: 16px; }
+.foot a:first-child { margin-left: 0; }
